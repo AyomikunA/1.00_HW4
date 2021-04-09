@@ -1,0 +1,44 @@
+<head>
+    <title> Publishers </title>
+    <link rel="stylesheet" href="/static/content-table.css">
+</head>
+
+<body>
+    <h2>Modify Publishers</h2>
+    <table class ="content-table">
+        <thead>
+            <tr>
+                <th>Publisher ID</th>
+                <th>Publisher Name</th>
+                <th>City</th>
+                <th>Region </th>
+                <th>Country</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for publisher in list %}
+                <tr>
+                    <td> {{publisher[0]}} </td>
+                    <td> {{publisher[1]}} </td>
+                    <td> {{publisher[2]}} </td>      
+                    <td> {{publisher[3]}} </td>      
+                    <td> {{publisher[4]}} </td>
+                <td> 
+                    <a href="/publisher?id={{publisher[0]}}&name={{publisher[1]}}&city={{publisher[2]}}&region={{publisher[3]}}&country={{publisher[4]}}">
+                        <img src="/static/edit.png" width="30"> 
+                    </a>
+                </td>
+                <td> 
+                    <a href="/deletePublishers?id={{publisher[0]}}">
+                        <img src="/static/delete.png" width="30"> 
+                    </a>
+                </td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>   

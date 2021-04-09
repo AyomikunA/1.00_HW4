@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="/static/form-style.css">
+</head>
+
+<body>
+    <h1>Edit Book Details</h1>
+    <form method="POST" action="/updateBooks">
+        Book ID <input type="text" name="id" value="{{book.id}}"/>
+        <br>
+        Title <input type="text" name="title" value="{{book.name}}"/>
+        <br>
+        Genre <input type="text" name="genre" value="{{book.genre}}"/>
+        <br>
+        PublisherID <input type="text" name="publisher" value="{{book.publisher}}"/>
+        <br>
+        Publication Year <input type="text" name="year" value="{{book.year}}"/>
+        <br>
+        Price <input type="text" name="price" value="{{book.price}}"/>
+        <br>
+        <input type="submit">
+    </form>
+</body>

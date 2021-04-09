@@ -1,0 +1,31 @@
+<head>
+    <link rel="stylesheet" href="/static/content-table.css">
+</head>
+
+<body>
+    <h2>View Publishers</h2>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Publisher ID</th>
+                <th>Publisher Name</th>
+                <th>City</th>
+                <th>Region </th>
+                <th>Country</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for publisher in list %}
+        <tr>
+        <td> {{publisher[0]}} </td>
+        <td> {{publisher[1]}} </td>
+        <td> {{publisher[2]}} </td>      
+        <td> {{publisher[3]}} </td>      
+        <td> {{publisher[4]}} </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+    </table>
+</body>

@@ -1,0 +1,46 @@
+<head>
+    <link rel="stylesheet" href="/static/content-table.css">
+</head>
+
+<body>
+    <h2>Modify Books</h2>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>PublisherID </th>
+                <th>Publication Year</th>
+                <th>Price(in $)</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for book in list %}
+        <tr>
+        <td> {{book[0]}} </td>
+        <td> {{book[1]}} </td>
+        <td> {{book[2]}} </td>      
+        <td> {{book[3]}} </td>      
+        <td> {{book[4]}} </td>
+        <td> {{book[5]}} </td>
+        <td> 
+            <a href="/book?id={{book[0]}}&name={{book[1]}}&genre={{book[2]}}&publisher={{book[3]}}&year={{book[4]}}&price={{book[5]}}">
+                <img src="/static/edit.png" width="30"> 
+            </a>
+        </td>
+        <td> 
+            <a href="/delete?id={{book[0]}}">
+                <img src="/static/delete.png" width="30"> 
+            </a>
+        </td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+
+    </table>
+</body>
